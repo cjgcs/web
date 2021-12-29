@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+		<link rel="shortcut icon"  href="img/tubiao.ico"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/header.css"/> -->
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+				text-decoration: none;
+			}
+			body{
+				width: 100%;
+				height: 100%;
+				background-image: url(img/bg3.jpg);
+				background-size: 1920px 3000px;
+			}
+			header{
+				width: 100%;	/* 宽度为网页的100% */
+				height: 20%;	/* 高度为网页的20% */
+				margin: auto;	/* 外边距自动 */
+				position:  relative;	/* 定位设置为相对定位 */
+			}
+			#logo{
+				width: 67%;
+				height: 6rem;
+				background-color: white;
+				background-image: url(img/logo.png);
+				background-repeat: no-repeat;
+				background-size: 90px 100px;
+			}
+			header img{
+				width: 120%;
+				max-width: 120%;
+				height: 100%;
+				max-height: 100%;
+				
+			}
+			/* 轮播 */
+			.slide {
+			    position: relative;
+			    margin: auto;
+			    width: 1900px;
+			    height: 700px;
+			    overflow: hidden;
+			}
+			
+			.slide ul {
+			    margin: 0;
+			    padding: 0;
+			    width: 9999px;
+			    /* transition: all 0.5s; */
+			}
+			
+			/*//自动播放*/
+			.slide .slide-auto {
+			    animation: marginLeft 18s infinite;
+			}
+			.slide li {
+			    float: left;
+			    width: 1900px;
+			    height: 700px;
+			}		
+			.slide li:nth-child(1) {
+			    background:url(img/1.jpg);
+			}			
+			.slide li:nth-child(2) {
+			    background: url(img/2.jpg);
+			}			
+			@keyframes marginLeft {
+			    0% {
+			        margin-left: 0;
+			    }			
+			    28.5% {
+			        margin-left: -1900px;
+			    }			
+			    33.3% {
+			        margin-left: -1900px;
+			    }			
+			    62% {
+			        margin-left: -1900px;
+			    }			
+			    66.7% {
+			        margin-left: -1900px;
+			    }			
+			    95.2% {
+			        margin-left: -0px;
+			    }			
+			    100% {
+			        margin-left: 0;
+			    }
+			}
+			
+			/* 菜单 */
+			#menu{
+				position: absolute;
+				right: 0rem;
+				top: 0rem;
+				float: left;
+				background-color: white;
+			}
+			
+			#menu li{
+				float: left;
+				list-style-type: none;
+				padding: 2.1875rem 3rem 2.1875rem 3rem;
+			}
+			#menu li a{
+				color: black;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			#menu li:hover{
+				background-color: lightgreen;
+				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);//阴影
+				transition: all .2s ease-in-out;//渐变
+				
+			}
+			
+			
+			#section1{
+				width: 98%;
+				/* height: 120rem; */
+				/* border: 1px solid #002752; */
+				margin: auto;
+				margin-top: 1.25rem;
+				/* background-image: url(img/bg.jpeg); */
+			}
+			#leftbar{
+				width: 22%;
+				height: 50rem;
+				/* border: 1px solid #002752; */
+				margin: 10px 0px 10px 10px;
+				float: left;
+				
+			}
+			#leftbar li{
+				padding: 30px 0px 60px 0px;
+				list-style-type: none;
+			}
+			#leftbar input{
+				width:100%;
+				height: 100px;
+				color: purple;
+				font-family: "ms outlook";
+				font-weight: bolder;
+				background-color: wheat;
+				border: none;
+				border-radius: 30px;
+				font-size: 22px;
+				opacity: 0.8;
+			}
+			#leftbar input:hover{
+				font-size: 200%;
+			}
+			
+			
+			#main{
+				width: 75%;
+				height: 98%;
+				/* border: 1px solid #002752; */
+				margin: 10px 0px 10px 30px;
+				float: left;
+				color: white;
+				overflow: hidden;
+				background-image: url(img/main-bg1.jpg);
+				background-size: 1400px 1800px;
+				border-radius: 30px;
+			}
+			#main div{
+				width: 100%;
+				height: 100%;
+				display:  none;
+			}
+			#main img{
+				width: 80%;
+				height: 50%;
+				padding: 5% 10% 5% 10%;
+				
+			}
+			#main p{
+				margin: 3% 8% 3% 8%;
+				font-family: 楷体;
+				font-size: 25px;
+			}
+			
+			
+			
+			/* 早餐 */
+			#d2 h3,h4{
+				margin-left: 50px;
+				font-size: 30px;
+			}
+			#d2 p{
+				width: 80%;
+				margin: auto;
+				font-family: 楷体;
+				font-size: 25px;
+			}
+			#d2 ul{
+				width: 80%;
+				margin: 20px 0px 20px 60px;
+				padding: 20px 0px 0px 10px;
+			}
+			#d2 li{
+				padding: 20px;
+				font-family: 楷体;
+				font-size: 25px;
+			}
+			
+			/* 午餐 */
+			#d3 h3,h4{
+				margin-left: 50px;
+				font-size: 30px;
+			}
+			#d3 p{
+				width: 80%;
+				margin: auto;
+				font-family: 楷体;
+			}
+			#d3 ul{
+				width: 80%;
+				margin: 20px 0px 20px 60px;
+				padding: 20px 0px 0px 20px;
+			}
+			#d3 li{
+				padding: 20px;
+				font-family: 楷体;
+				font-size: 25px;
+			}
+			
+			/* 晚餐 */
+			#d4 ol{
+				width: 80%;
+				margin: 20px 0px 20px 100px;
+				padding: 20px 0px 0px 20px;
+			}
+			#d4 li{
+				padding: 20px;
+				font-family: 楷体;
+				font-size: 25px;
+			}
+			
+			
+			#rightbar{
+				width: 22%;
+				height: 80rem;
+				/* border: 1px solid #002752; */
+				margin: 10px 0px 10px 50px;
+				float: left;
+				background-image: url(img/rightbar.jpg);
+				border-radius: 30px;
+			}
+			#rightbar h1{
+				margin: 40px 0px 0px 80px ;
+				color: skyblue;	
+			}
+			#rightbar  li{
+				list-style-type: none;
+				margin-left: 20%;
+			}
+			#rightbar p{
+				font-weight: bolder;
+				padding: 20px 0px 20px 60px;
+				font-size: 25px;
+				color: white;
+			}
+			#rightbar li img{
+				transform: scale(1);
+				transition: transform 0.8s ease 0s;
+			}
+			#rightbar li img:hover{
+				transform: scale(1.2);
+			}
+			
+			#footer{
+				width: 98%;
+				height: 8rem;
+				/* border: 1px solid #002752; */
+				margin: auto;
+				margin-top: 1.25rem;
+				margin-bottom: 1.25rem;
+				margin-left: 1.25rem;
+				float: left;
+				position: relative;
+				background-image: url(img/dl.jpg);
+				background-size: 1920px 130px;
+				background-repeat: no-repeat;
+				border-radius: 40px;
+			}
+			.dl{
+				position: absolute;
+				top: 20px;
+				left: 620px;
+				color: white;
+				font-weight: bold;
+			}
+			#footer a:hover{
+				font-size: 120%;
+				color: red;
+			}
+			
+		</style>
+		
+		<script type="text/javascript">
+			window.onload=function ()
+			{
+				var od1=document.getElementById('d1');
+				var od2=document.getElementById('d2');
+				var od3=document.getElementById('d3');
+				var od4=document.getElementById('d4');
+				
+				var orightbar=document.getElementById('rightbar');
+				var omain=document.getElementById('main');
+				
+				var or1=document.getElementById('r1');
+				var or2=document.getElementById('r2');
+				var or3=document.getElementById('r3');
+				
+				var ob1=document.getElementById('b1');
+				var ob2=document.getElementById('b2');
+				var ob3=document.getElementById('b3');
+				var ob4=document.getElementById('b4');
+				
+				ob1.onclick=function ()
+				{
+					od1.style.display='block';
+					od2.style.display='none';
+					od3.style.display='none';
+					od4.style.display='none';
+					orightbar.style.display='none';
+					or1.style.display='none';
+					or2.style.display='none';
+					or3.style.display='none';
+					omain.style.width='75%';
+				}
+				ob2.onclick=function ()
+				{
+					od1.style.display='none';
+					od2.style.display='block';
+					od3.style.display='none';
+					od4.style.display='none';
+					orightbar.style.display='block';
+					or1.style.display='block';
+					or2.style.display='none';
+					or3.style.display='none';
+					omain.style.width='50%';
+				}
+				ob3.onclick=function ()
+				{
+					od1.style.display='none';
+					od2.style.display='none';
+					od3.style.display='block';
+					od4.style.display='none';
+					orightbar.style.display='block';
+					or1.style.display='none';
+					or2.style.display='block';
+					or3.style.display='none';
+					omain.style.width='50%';
+				}
+				ob4.onclick=function ()
+				{
+					od1.style.display='none';
+					od2.style.display='none';
+					od3.style.display='none';
+					od4.style.display='block';
+					orightbar.style.display='block';
+					or1.style.display='none';
+					or2.style.display='none';
+					or3.style.display='block';
+					omain.style.width='50%';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			
+			<div id="logo">
+				<a href="index.html"><!-- <img src="img/logo.png" width="90" height="100"> --></a>
+				
+			</div>
+			
+			<nav>
+				<div id="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Breakfast.html">Breakfast</a></li>
+						<li><a href="Lunch.html">Lunch</a></li>
+						<li><a href="Dinner.html">Dinner</a></li>
+					</ul>
+				</div>
+				<div class="slide">
+					<ul class="slide-auto">
+						<li>
+							
+						</li>
+						<li>
+							
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<!-- <a href="" id="left"><span class="iconfont">&#xe62c;</span></a>
+			<a href="" id="right"><span class="iconfont">&#xe62d;</span></a> -->
+		</header>
+		<div id="section1">
+			
+			<div id="leftbar">
+				<div>
+					<ul>
+						<li><input type="button" id="b1" value="饮食健康为何如此重要"  style="background-image: url(img/饮食.png);"/></li>
+						<li><input type="button" id="b2" value="早餐应该怎么吃" style="background-image: url(img/早餐.png);  color:orangered; "   /></a></li>
+						<li><input type="button" id="b3" value="午餐应该怎么吃" style="background-image: url(img/中餐.png);  color:black;"    /></a></li>
+						<li><input type="button" id="b4" value="晚餐应该怎么吃" style="background-image: url(img/晚餐.png); color: #E040FB; "    /></a></li>
+					</ul>
+				</div>
+			</div>		
+			<div id="main">
+				<div id="d1" style="display: block;">
+					<img src="img/健康饮食.png" >
+					<p>
+						大量研究显示健康饮食可以预防抑郁且有助于预防所有类型的营养不良以及包括诸如糖尿病、心脏病、中风和癌症在内的非传染性疾病。
+						<br><br>
+						保持健康是每个人的责任，包括你和你的父母。保持健
+						康不仅要确保锻炼和饮水量充足，良好的饮食也非常重要。
+						健康饮食是指每天摄入充足的有营养、安全和多样化的食
+						物，这样你才能健康成长，保持活跃（跑步、玩耍、学习、长身
+						体和爬树）。
+						<br><br>
+						不健康的饮食会引发疾病甚至死亡。你知道吗？如今全
+						球五分之一的死亡是由不健康饮食导致的。如果人们食用的
+						水果、蔬菜和豆类不足，反而摄入过多高糖、高脂肪或高盐食
+						物，就会发生这种情况。所以说健康饮食非常重要。
+						<br><br>
+						健康饮食指饮食结构均衡，包含适量（既不能太多，也不
+						能太少！）的不同种类食物，以使身体获得正常工作所需的物
+						质（如维生素和矿物质等营养物质和其它重要成分），这一点
+						非常重要。以下是构成健康饮食的不同要素（即食物种类）。
+						知识不仅是力量，也是健康！
+					</p>
+				</div>
+				<div id="d2" >
+					<img src="img/早餐.jpeg">
+					
+					<h3>早餐：营养结构要均衡</h3><br>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;起床后，建议先喝一杯温开水，以补充睡眠时所消耗的水分，并活动20至30分钟后，再吃早餐。早餐进食的最佳时间是早上7点至9点。
+					我们从睡梦中醒来的身体仍处于低能量状态，所以应该要吃营养均衡且不过量的早餐，也就是说蛋白质、脂肪、碳水化合物的量必须是一个合理的结构，碳水化合物所占的比例应该是最大的（整份早餐60%的分量）。</p>
+					<br><h4>建议的早餐选择：</h4>
+					<ul>
+						<li>碳水化合物/淀粉食物：全麦面包或馒头、燕麦片、杂粮粥、杂粮类食物</li>
+						<li>优质蛋白质：鸡蛋或鸡肉夹入三明治、水煮蛋、豆浆、优酪乳、坚果类等</li>
+						<li>含钙质丰富的食品：牛奶、低脂乳酪起士</li>
+						<li>不饱和脂肪：牛油果、斟酌涂抹在面包上的奶油使用量（不超过一茶匙）</li>
+						<li>多摄取新鲜蔬菜和水果，以补充身体所需的维生素、矿物质、酵素、膳食纤维</li>
+						<li>避免吃过于油腻、煎炸或刺激性大的食物</li>
+					</ul>
+				</div>
+				<div id="d3" >
+					<img src="img/中餐炒饭.png" >
+					<h3>怎么样健康吃午餐</h3>
+					<ul>
+						<li>老年人：多吃易消化食物。老年人应保证奶制品、豆制品和禽肉鱼虾等富含蛋白质食物的摄入，但因胃肠功能减退，不宜一次吃得太多，可以多次进食，便于消化吸收。老年人咀嚼力下降，建议把食物切成小块，延长烹调时间，做得软烂一些。饭菜最好吃多少做多少，尽量少吃或不吃剩饭剩菜。 </li>
+						<li>外卖族：饭后补充水果、坚果。点外卖时，首先要了解店家是否卫生，其次要注意荤素搭配，食材丰富。中式快餐相对洋快餐更健康些，可选择蒸煮、清炒、白灼等放油较少的菜肴，玉米、红薯等五谷杂粮，豆浆、绿茶等健康饮品。每天最好带个水果和一把坚果，作为饭后补充，为午餐加分。值得提醒的是，尽量不要边吃边工作，以免增加胃肠消化负担。</li>
+						<li>带饭族：注意食物搭配和保存。若要自带午饭，最好早晨起来现做。若是前一天晚上的饭菜，一定要密封冷藏，到单位后马上放进冰箱，吃前将饭菜热透。自带午餐不宜有鱼类、海鲜类，因为它们在隔夜后易产生蛋白质降解物，不利健康。带饭族最好使用真空保鲜盒、保温饭盒，携带过程中放入冷袋。 </li>
+						<li>学生族：种类多样，营养丰富。青少年要养成吃五谷杂粮的好习惯，不仅增加主食花样，还可增进食欲，对补充B族维生素和膳食纤维也很有益处。青少年的午餐少不了瘦肉、鱼类、蛋类、豆制品等，这些食物富含蛋白质，且能提供胆碱或卵磷脂，可以满足青少年生长发育、智力发展的需要。建议学校安排专业营养师为学生配餐，在菜单上标明营养成分，列出卡路里和蛋白质含量。 </li>
+					</ul>
+				</div>
+				<div id="d4" >
+					<img src="img/晚餐3.jpg" >
+					<ol>
+						<li>晚餐一定要吃蔬菜，而且这些蔬菜最好是少油少盐，如果能够生吃那是最好的，因为蔬菜富含维生素和矿物质，可以为我们的而身体补充这些营养素，同时蔬菜的热量是很低的，几乎不含脂肪，所以，可以多吃一些，建议多吃黄瓜和西红柿，这两种食物都有减肥的功效。</li>
+						<li>晚餐一样是可以吃肉的，但是要控制吃肉的总量，吃的肉不能超过2两，但是不建议吃猪肉，因为肉类当中猪肉的脂肪含量是最高的，所以，建议选择牛肉或者鸡胸肉，不要选择带皮的鸡肉，还可以选择吃鱼或者虾，这些食物的蛋白质含量都很高，可以为我们身体补充充足的蛋白质，同时这些食物的脂肪含量很少，可以吃而且不会发胖。</li>
+						<li>晚餐完全可以不吃主食，所说的精米精面，比如米饭、馒头、面条、花卷等，可以用一些粗粮来代替，比如玉米、芋头、红薯等。因为粗粮的碳水化合物比主食要少很多，还含有很多的纤维素，对我们的胃肠健康很有帮助。当然，虽然换了粗粮，依然要控制好食物的总量，建议每一餐吃吃一根玉米，或者两个小芋头或者一个红薯，切记不要吃烤红薯，最好是自己蒸出来的红薯。</li>
+						<li>专家认为，晚餐过迟可引起尿结石。尿结石的主要成分是钙，而食物中所含的钙除了一部分是通过肠壁被机体吸收外，多余的则全部由小便排出。人们排尿的高峰时间是饭后4—5小时，而晚饭吃得过迟，人们不再进行激烈活动，会使晚饭后产生的尿液全部滞留在膀胱中。这样，膀胱尿液中钙的含量会不断增加，久而久之，就形成了尿结石。因此，晚餐不宜进食太迟，至少要在就寝前两小时就餐。</li>
+					</ol>
+				</div>
+			</div>
+			<div id="rightbar" style="display: none;">
+				<div id="r1">
+					<h1>今日早餐推荐<img src="img/火爆.png" width="12%" height="12%"><img src="img/火爆.png" width="12%" height="12%"></h1>
+					<br><br>
+					<ul>
+						<li><img src="img/早餐粥.png" width="90%" height="30%" style="border-radius: 20%;">
+						<p>胡萝卜排骨粥</p>
+						</li>
+						
+						<li>
+							<img src="img/早餐饼.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>金枪鱼海苔蛋皮卷</p>
+							
+						</li>
+						<li>
+							<img src="img/早餐水果.jfif" width="90%" height="30%" style="border-radius: 20%;">
+							<p>早餐必备水果</p>
+							
+						</li>
+					</ul>
+				</div>
+				
+				<div id="r2">
+					<h1>今日中餐推荐<img src="img/火爆.png" width="12%" height="12%"><img src="img/火爆.png" width="12%" height="12%"></h1>
+					<br><br>
+					<ul>
+						<li><img src="img/中餐1.png" width="90%" height="30%" style="border-radius: 20%;">
+						<p>西红柿炒蛋</p>
+						</li>
+						
+						<li>
+							<img src="img/中餐2.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>口蘑炒鸡肉</p>
+							
+						</li>
+						<li>
+							<img src="img/中餐3.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>香辣麻婆豆腐</p>
+							
+						</li>
+					</ul>
+				</div>
+				
+				<div id="r3">
+					<h1>今日晚餐推荐<img src="img/火爆.png" width="12%" height="12%"><img src="img/火爆.png" width="12%" height="12%"></h1>
+					<br><br>
+					<ul>
+						<li>
+							<img src="img/晚餐1.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>豆豉手撕包菜</p>
+						</li>
+						
+						<li>
+							<img src="img/晚餐2.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>冰糖银耳莲子羹</p>
+							
+						</li>
+						<li>
+							<img src="img/晚餐3.png" width="90%" height="30%" style="border-radius: 20%;">
+							<p>海带炖猪排骨</p>
+							
+						</li>
+					</ul>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div class="dl"> <a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关于健康美食</a>	|	如果想进一步了解和规划自己的健康饮食<a href="https://m.boohee.com/">请点击下载软件使用</a>
+			<br><br>
+			俗话说的好，三分运动七分饮食，好的饮食也需要运动的搭配，<a href="https://xyz616121559.wordpress.com/sport/">点击此链接了解详情</a>
+			</div>
+		</div>
+	</body>
+</html>

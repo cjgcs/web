@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+			*{margin: 0;
+			padding: 0;
+			text-decoration: none;}
+			body{width: 100%;
+			height: 100%;
+			background-color: #EEECE9}
+			#menu{position: absolute;
+			right: 2.5rem;
+			top: 0rem;
+			float: left;}
+			#menu li{float: left;
+			list-style-type: none;
+			padding: 2.1875rem;}
+			#menu li a{color: black;}
+			#menu li:hover{
+				background-color: lightgreen;
+				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .25);//阴影
+				transition: all .2s ease-in-out;//渐变
+				
+			}
+			#logo{width: 5rem;
+			height: 6.5rem;}
+			#ag1{height: 375px;	
+			background-color: rgb(243,243,239);
+			position: relative;
+			}
+			#ag2{position: absolute;
+				top:120px;
+				left:800px;
+			}
+			#ag{position: absolute;
+			top:0px;
+			left: 300px;
+			}
+            #lunch{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#zt{border-bottom: 1px #CCC solid;
+			background-color: white;
+			}
+			#lunch h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch h2 a{
+				text-decoration: none;
+			}
+			#lunch p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			.xhx{width: 1200px;
+			margin: auto;
+		    border-bottom: 1px #CCC solid;
+			}
+			#lunch1{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;}
+			#lunch1 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch1 h2 a{
+				text-decoration: none;
+			}
+			#lunch1 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#lunch2{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#lunch2 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch2 h2 a{
+				text-decoration: none;
+			}
+			#lunch2 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#lunch3{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#lunch3 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch3 h2 a{
+				text-decoration: none;
+			}
+			#lunch3 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#lunch4{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#lunch4 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch4 h2 a{
+				text-decoration: none;
+			}
+			#lunch4 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#lunch5{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#lunch5 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch5 h2 a{
+				text-decoration: none;
+			}
+			#lunch5 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#lunch6{width: 900px;
+				margin: auto;
+				padding-top: 30px;
+				position: relative;
+			}
+			#lunch6 h2{
+				position: absolute;
+				top:50px;
+				left: 270px;
+				color: #000000;
+			}
+			#lunch6 h2 a{
+				text-decoration: none;
+			}
+			#lunch6 p{
+				position: absolute;
+				top:100px;
+				left: 270px;
+				color: #666;
+			}
+			#yema{
+			    width: 270px;
+			    height: 50px;
+			    margin: auto;
+			    margin-bottom: 50px;
+			   }
+			   #yema ul{
+			    list-style: none;
+			   }
+			   #yema li{
+			    padding:2px 8px;
+			    margin: 10px;
+			    
+			    float: left;
+			    background-color: #ccc;
+			   }
+			   #yema a{
+			    color: #000000;
+			   }
+			   #yema li:hover{
+			    background-color: #666;
+			    color: white;
+			   }
+			   #weiba{
+			       height: 200px;
+			       background-color: #d6d4d0;
+			      }
+			      #jj{
+			       width: 960px;
+			       margin: auto;
+			       padding-top: 20px;
+			       font-size: 14px;
+			      }
+			      #gy{
+			       width: 960px;
+			       height: 30px;
+			       margin: auto;
+			       padding-top: 20px;
+			       font-size: 14px;
+				   text-align: center;
+			      }
+			      #gy a{
+			       font-size: 14px;
+			       color: black;
+			      }
+			      #gy a:hover{
+			       color: white;
+			      }
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div id="zt">
+		    <div id="logo">
+		        <a href="index.html"><img src="img/logo.png" width="90" height="100"></a>
+		    </div>
+		<nav>
+		    <div id="menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Breakfast.html">Breakfast</a></li>
+				<li><a href="Lunch.html">Lunch</a></li>
+				<li><a href="Dinner.html">Dinner</a></li>
+			</ul>			
+		    </div>
+		</div>
+		<div id="ag1">
+			<div id="ag">
+			    <img src="img/lunchag.jpg" >
+		    </div>	
+			<div id="ag2">
+				<ul>
+					<li>健康的午餐应以五谷为主，配合大量蔬菜、瓜类及水果，适量肉类、蛋类及鱼类食物，并减少油、盐及糖分等等。</li>
+					<br>
+					<br>
+					<li>午餐中的三低一高也是需要特别注意的，即低油、低盐、低糖及高纤维。</li>
+					<br>
+					<br>
+					<li>营养午餐还得讲究123的比例，即食物分量的分配：六分之一是肉或鱼或蛋类，六分之二是蔬菜，六分之三是饭或面或粉。</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div id="lunch">
+			<a href=""><img src="img/lunch1.jpg" width="240px" height="240px"></a>
+			<a href=""><h2>虾皮炒韭菜</h2></a>
+			<p>主要食材：韭菜、虾皮。
+			<br>
+			<br>
+			菜品特色:做法简单，口味鲜咸，色泽鲜艳。
+			</p>
+		</div>
+			<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch1">
+			<a href=""><img src="img/lunch2.jpg" width="240px" height="240px"></a>
+			<a href=""><h2>西红柿炒蛋</h2></a>
+			<p>主要食材：鸡蛋，西红柿。
+			<br>
+			<br>
+			菜品特色：色泽鲜艳，酸甜爽口，口感爽滑，色香味浓，增加食欲。
+			<br>
+			<br>
+			营养价值：鸡蛋炒西红柿是营养素互补的很不错实例。在丰富营养的同时，还具有健脑抗衰老的做用。
+			鸡蛋中含有丰富的DHA和卵磷脂等，对神经系统和身体发育有非常大的做用，能健脑益智，避免老年
+			人智力衰退，并可改变各个年龄组的记忆力。不少长寿老人的延年益寿经验之一就是每天必吃一个鸡蛋。
+			</p>
+		</div>
+		<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch2">
+			<a href=""><img src="img/lunch3.jpg" width="240px" height="240px"></a>
+			<a href=""><h2>口蘑炒鸡肉</h2></a>
+			<p>主要食材：鸡腿，口蘑。
+			<br>	
+			<br>
+			菜品特色：色泽鲜艳，口感爽滑。
+			</p>
+		</div>
+		<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch3">
+			<a href=""><img src="img/lunch4.jpg" height="240px" width="240px" ></a>
+			<a href=""><h2>麻婆豆腐</h2></a>
+			<p>主要食材：豆腐，肉沫，新鲜猪肉。
+			<br>	
+			<br>
+			菜品特色：麻婆豆腐的特色在于麻、辣、烫、香、酥、嫩、鲜、活八字。麻：指豆腐在起锅时，要洒上适量的花椒末。花椒最好用汉源贡椒，麻味纯正，沁人心脾。 如若别地花椒，麻味卡喉，令人气紧。
+			<br>辣： 选用龙潭寺大红袍油椒制作豆瓣，剁细炼熟，加以少量熟油、海椒烹脍豆腐，又辣又香。
+			<br>嫩：豆腐下锅，煎氽得法，色白如玉，有楞有角，一捻即碎，故多用小勺舀食……
+			</p>
+		</div>
+		<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch4">
+			<a href=""><img src="img/lunch5.jpg" height="240px" width="240px" ></a>
+			<a href=""><h2>炒青菜</h2></a>
+			<p>主要食材：青菜。
+			<br>	
+			<br>
+			营养价值：提供营养，强身健体 青菜为含维生素和矿物质最丰富的蔬菜之一，成年人如果每天吃500克青菜，就能满足人体所需的维生素;
+			青菜中含有大量粗纤维，其进人人体内与脂肪结合后，可防止血浆胆固醇形成，促使胆固醇代谢物胆酸得以排出体外，以减少动脉粥样硬化的形成，从而保持血管弹性;
+			青菜中所含的维生素C，在体内会形成一种“透明质酸抑制物”，这种物质具有抗癌作用，可使癌细胞丧失活力;
+			青菜中含有大量胡萝卜素和维生素C，进入人体后，可促进皮肤细胞代谢，防止皮肤粗糙及色素沉着，使皮肤亮洁。
+			</p>
+		</div>
+		<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch5">
+			<a href=""><img src="img/lunch6.jpg" height="240px" width="240px" ></a>
+			<a href=""><h2>蒸蛋</h2></a>
+			<p>主要食材：鸡蛋。
+			<br>	
+			<br>
+			营养价值：鸡蛋的蛋白质中含有丰富的人体必需氨基酸，其组成比例适合人体需要，也是维生素、无机盐的良好来源，是一种营养价值很高的食品。
+			</p>
+		</div>
+		<br>
+		<div class="xhx">
+		</div>
+		<div id="lunch6">
+			<a href=""><img src="img/lunch7.jpg" height="240px" width="240px" ></a>
+			<a href=""><h2>清蒸鱼</h2></a>
+			<p>主要食材：鱼。
+			<br>	
+			<br>
+			营养价值：不同的鱼有不同的营养价值
+			<br>鲫鱼——有益气健脾、利水消肿、清热解毒、通络下乳等功能。腹水患者用鲜鲫鱼与赤小豆共煮汤服食有疗效。用鲜活鲫鱼与猪蹄同煨，连汤食用，可治产妇少乳。鲫鱼油有利于心血管功能，还可降低血液粘度，促进血液循环。
+			<br>鲢鱼——有温中益气、暖胃、滋润肌肤等功能，是温中补气养生食品。
+			<br>青鱼——有补气养胃、化湿利水、祛风除烦等功能。其所含锌硒等微量元素有助于抗癌。
+			</p>
+		</div>
+		<br>
+		<br>
+		<div id="yema">
+		    <ul>
+		     <a  href=""><li style="background-color:#666;color: white;">1</li></a>
+		     <a href=""><li>2</li></a>
+		     <a href=""><li>3</li></a>
+		     <a href=""><li>4</li></a>
+		     <a href=""><li>下一页</li></a>
+		    </ul>
+		</div>
+		<div id="weiba">
+		    <div id="jj">
+		       <p>内容简介：俗话说“中午饱，一天饱”。说明午餐是一日中主要的一餐。由于上午体内热能消耗较大，午后还要继续工作和学习，因此，不同年龄、不同体力的人午餐热量应占他们每天所需总热量的40%。
+			   午餐一定要吃，有的人因为工作繁忙，午餐就咬块面包完事，这样是非常不可取的，对身体健康也是一大伤害，午餐与早餐同样重要。
+			   </p>
+		    </div>
+		    <div id="gy">
+		       <a href="">关于午餐</a> | <a href="">联系我们</a> | <a href="">隐私声明</a>
+		    </div>
+		</div>
+	</body>
+</html>
